@@ -4,6 +4,7 @@ import React, { useState } from "react";
 // importing styles for sign up form
 import { FormDivStyle } from "./FormStyles/FormDivStyle";
 import { InputStyle } from "./FormStyles/InputStyle";
+import { LabelStyle } from "./FormStyles/LabelStyle";
 import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
 import { LgSgStyle } from "./FormStyles/LgSgStyle";
 
@@ -29,7 +30,7 @@ const RegisterForm = props => {
   // layout of the register form
   return (
     <form onSubmit={singupForm}>
-      <label htmlFor="email">Email</label>
+      <LabelStyle htmlFor="email">Email</LabelStyle>
       <InputStyle
         id="email"
         type="email"
@@ -37,7 +38,7 @@ const RegisterForm = props => {
         placeholder="medseed@me.com"
         value={userInfo.email}
       />
-      <label htmlFor="username">Username</label>
+      <LabelStyle htmlFor="username">Username</LabelStyle>
       <InputStyle
         id="username"
         type="text"
@@ -45,7 +46,7 @@ const RegisterForm = props => {
         placeholder="medseed@me.com"
         value={userInfo.username}
       />
-      <label htmlFor="password">Password</label>
+      <LabelStyle htmlFor="password">Password</LabelStyle>
       <InputStyle
         id="email"
         type="password"
