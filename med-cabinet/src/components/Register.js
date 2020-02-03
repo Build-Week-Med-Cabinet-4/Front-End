@@ -25,7 +25,7 @@ const Register = () => {
         e.preventDefault();
         setIsFetching(true);
         axiosWithAuth()
-        .post('/register', credentials)
+        .post('/api/auth/register', credentials)
         .then(res => {
             console.log(res.data);
             history.push('/login');
@@ -34,3 +34,4 @@ const Register = () => {
     };
 }
 
+export default Register;
