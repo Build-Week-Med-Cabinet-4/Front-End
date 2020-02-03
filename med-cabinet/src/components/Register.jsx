@@ -48,7 +48,7 @@ const RegisterForm = props => {
       <label htmlFor="password">Password</label>
       <input
         id="email"
-        type="email"
+        type="password"
         onChange="handleChanges"
         placeholder="medseed@me.com"
         value={userInfo.password}
