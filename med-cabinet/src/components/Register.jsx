@@ -8,7 +8,7 @@ import { LabelStyle } from "./FormStyles/LabelStyle";
 import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
 
 // register form function.
-const SignupForm = props => {
+const RegisterForm = props => {
   // store user info in the state variables
   const [userInfo, setUserInfo] = usesState({
     email: "",

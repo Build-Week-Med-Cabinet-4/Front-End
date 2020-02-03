@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 // Import welcome page, sign-up page and login page.
 import WelcomePage from "./WelcomePage";
-import Signup from "./Signup";
+import Register from "./Register";
 import Login from "./Login";
 
 // Setup function for router to the app.
@@ -18,7 +18,7 @@ function AppRouter() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/register">Sign Up</Link>
             </li>
             <li>
               <Link to="/locations">Login</Link>
@@ -27,7 +27,7 @@ function AppRouter() {
         </nav>
         <Switch>
           <Route path="/" component={WelcomePage} />
-          <Route path="/signup" component={Signup} />
+          <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
         </Switch>
       </div>
