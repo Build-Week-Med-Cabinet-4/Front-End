@@ -17,13 +17,14 @@ const RegisterForm = props => {
   });
 
   // update what the user has typed into state upon the changes
-  function handleChange(event) {
+  function handleChanges(event) {
     setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
   }
 
   // submit form for sign up
   function submitSignup(event) {
     event.preventDefault();
+    setUserInfo({ email: "", username: "", password: "" });
   }
 
   // layout of the register form
@@ -37,7 +38,7 @@ const RegisterForm = props => {
           <InputStyle
             id="email"
             type="email"
-            onChange="handleChanges"
+            onChange={handleChanges}
             placeholder="medseed@me.com"
             value={userInfo.email}
           />
@@ -46,7 +47,7 @@ const RegisterForm = props => {
           <InputStyle
             id="username"
             type="text"
-            onChange="handleChanges"
+            onChange={handleChanges}
             placeholder="medseed@me.com"
             value={userInfo.username}
           />
@@ -55,7 +56,7 @@ const RegisterForm = props => {
           <InputStyle
             id="email"
             type="password"
-            onChange="handleChanges"
+            onChange={handleChanges}
             placeholder="medseed@me.com"
             value={userInfo.password}
           />
