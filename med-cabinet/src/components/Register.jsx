@@ -30,7 +30,7 @@ const RegisterForm = props => {
   return (
     <form onSubmit={singupForm}>
       <label htmlFor="email">Email</label>
-      <input
+      <InputStyle
         id="email"
         type="email"
         onChange="handleChanges"
@@ -38,7 +38,7 @@ const RegisterForm = props => {
         value={userInfo.email}
       />
       <label htmlFor="username">Username</label>
-      <input
+      <InputStyle
         id="username"
         type="text"
         onChange="handleChanges"
@@ -46,7 +46,7 @@ const RegisterForm = props => {
         value={userInfo.username}
       />
       <label htmlFor="password">Password</label>
-      <input
+      <InputStyle
         id="email"
         type="password"
         onChange="handleChanges"
