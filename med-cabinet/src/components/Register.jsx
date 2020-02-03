@@ -6,7 +6,6 @@ import { FormDivStyle } from "./FormStyles/FormDivStyle";
 import { InputStyle } from "./FormStyles/InputStyle";
 import { LabelStyle } from "./FormStyles/LabelStyle";
 import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
-import { LgSgStyle } from "./FormStyles/LgSgStyle";
 
 // register form function.
 const RegisterForm = props => {
@@ -29,32 +28,41 @@ const RegisterForm = props => {
 
   // layout of the register form
   return (
-    <form onSubmit={singupForm}>
-      <LabelStyle htmlFor="email">Email</LabelStyle>
-      <InputStyle
-        id="email"
-        type="email"
-        onChange="handleChanges"
-        placeholder="medseed@me.com"
-        value={userInfo.email}
-      />
-      <LabelStyle htmlFor="username">Username</LabelStyle>
-      <InputStyle
-        id="username"
-        type="text"
-        onChange="handleChanges"
-        placeholder="medseed@me.com"
-        value={userInfo.username}
-      />
-      <LabelStyle htmlFor="password">Password</LabelStyle>
-      <InputStyle
-        id="email"
-        type="password"
-        onChange="handleChanges"
-        placeholder="medseed@me.com"
-        value={userInfo.password}
-      />
-      <button type="submit">Sign Up</button>
-    </form>
+    // Container Style
+    <LgSgConStyle>
+      {/* Form Div Style */}
+      <FormDivStyle>
+        <form onSubmit={singupForm}>
+          <LabelStyle htmlFor="email">Email</LabelStyle>
+          <InputStyle
+            id="email"
+            type="email"
+            onChange="handleChanges"
+            placeholder="medseed@me.com"
+            value={userInfo.email}
+          />
+
+          <LabelStyle htmlFor="username">Username</LabelStyle>
+          <InputStyle
+            id="username"
+            type="text"
+            onChange="handleChanges"
+            placeholder="medseed@me.com"
+            value={userInfo.username}
+          />
+
+          <LabelStyle htmlFor="password">Password</LabelStyle>
+          <InputStyle
+            id="email"
+            type="password"
+            onChange="handleChanges"
+            placeholder="medseed@me.com"
+            value={userInfo.password}
+          />
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </FormDivStyle>
+    </LgSgConStyle>
   );
 };
