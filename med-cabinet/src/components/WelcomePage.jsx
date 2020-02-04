@@ -1,4 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// Import Links to Sign up or Login
+import Register from "./Register";
+import Login from "./Login";
+
+// Import Styling for Welcome Page
 import "./RouterStyles/WelcomePage.css";
 
 export default function WelcomePage() {
