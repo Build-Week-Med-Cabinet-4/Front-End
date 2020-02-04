@@ -26,7 +26,7 @@ function AppRouter() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/" component={WelcomePage} />
+          <Route exact path="/" component={WelcomePage} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
         </Switch>
