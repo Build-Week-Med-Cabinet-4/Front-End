@@ -8,27 +8,27 @@ import Register from "./Register";
 import Login from "./Login";
 
 // Import Styles for the Navigation bar.
-import NavContainerStyle from "./RouterStyles/NavContainerStyle";
-import ListStyle from "./RouterStyles/ListStyle";
+import { NavContainerStyle } from "./RouterStyles/NavContainerStyle";
+import { ListStyle } from "./RouterStyles/ListStyle";
 
 // Setup function for router to the app.
 function AppRouter() {
   return (
     <Router>
       <div>
-        <nav className="main-nav">
+        <NavContainerStyle className="main-nav">
           <ul>
-            <li>
+            <ListStyle>
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </ListStyle>
+            <ListStyle>
               <Link to="/register">Sign Up</Link>
-            </li>
-            <li>
+            </ListStyle>
+            <ListStyle>
               <Link to="/login">Log in</Link>
-            </li>
+            </ListStyle>
           </ul>
-        </nav>
+        </NavContainerStyle>
         <Switch>
           <Route exact path="/" component={WelcomePage} />
           <Route path="/register" component={Register} />
