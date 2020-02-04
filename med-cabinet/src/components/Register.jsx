@@ -6,6 +6,7 @@ import { FormDivStyle } from "./FormStyles/FormDivStyle";
 import { InputStyle } from "./FormStyles/InputStyle";
 import { LabelStyle } from "./FormStyles/LabelStyle";
 import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
+import { LgSgButtonStyle } from "./FormStyles/LgSgButtonStyle";
 
 // register form function.
 const RegisterForm = props => {
@@ -62,7 +63,7 @@ const RegisterForm = props => {
             value={userInfo.password}
           />
 
-          <button type="submit">Sign Up</button>
+          <LgSgButtonStyle type="submit">Sign Up</LgSgButtonStyle>
         </form>
       </FormDivStyle>
     </LgSgConStyle>

@@ -6,6 +6,7 @@ import { FormDivStyle } from "./FormStyles/FormDivStyle";
 import { InputStyle } from "./FormStyles/InputStyle";
 import { LabelStyle } from "./FormStyles/LabelStyle";
 import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
+import { LgSgButtonStyle } from "./FormStyles/LgSgButtonStyle";
 
 // login form function.
 const LoginForm = props => {
@@ -52,7 +53,7 @@ const LoginForm = props => {
             value={userInfo.password}
           />
 
-          <button type="submit">Login</button>
+          <LgSgButtonStyle type="submit">Login</LgSgButtonStyle>
         </form>
       </FormDivStyle>
     </LgSgConStyle>
