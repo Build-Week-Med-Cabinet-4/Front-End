@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 
 // importing styles for sign up form
-import { FormDivStyle } from "./FormStyles/FormDivStyle";
 import { InputStyle } from "./FormStyles/InputStyle";
 import { LabelStyle } from "./FormStyles/LabelStyle";
-import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
 import { LgSgButtonStyle } from "./FormStyles/LgSgButtonStyle";
+import { FormStyle } from "./FormStyles/FormStyle";
 
 // register form function.
 const RegisterForm = props => {
@@ -31,42 +30,37 @@ const RegisterForm = props => {
 
   // layout of the register form
   return (
-    // Container Style
-    <LgSgConStyle>
-      {/* Form Div Style */}
-      <FormDivStyle>
-        <form onSubmit={submitSignup}>
-          <LabelStyle htmlFor="email">Email</LabelStyle>
-          <InputStyle
-            id="email"
-            type="email"
-            onChange={handleChanges}
-            placeholder="medseed@me.com"
-            value={userInfo.email}
-          />
+    // Form Style
+    <FormStyle onSubmit={submitSignup}>
+      <LabelStyle htmlFor="email">Email</LabelStyle>
+      <InputStyle
+        id="email"
+        type="email"
+        onChange={handleChanges}
+        placeholder="medseed@me.com"
+        value={userInfo.email}
+      />
 
-          <LabelStyle htmlFor="username">Username</LabelStyle>
-          <InputStyle
-            id="username"
-            type="text"
-            onChange={handleChanges}
-            placeholder="username"
-            value={userInfo.username}
-          />
+      <LabelStyle htmlFor="username">Username</LabelStyle>
+      <InputStyle
+        id="username"
+        type="text"
+        onChange={handleChanges}
+        placeholder="username"
+        value={userInfo.username}
+      />
 
-          <LabelStyle htmlFor="password">Password</LabelStyle>
-          <InputStyle
-            id="password"
-            type="password"
-            onChange={handleChanges}
-            placeholder="password"
-            value={userInfo.password}
-          />
+      <LabelStyle htmlFor="password">Password</LabelStyle>
+      <InputStyle
+        id="password"
+        type="password"
+        onChange={handleChanges}
+        placeholder="password"
+        value={userInfo.password}
+      />
 
-          <LgSgButtonStyle type="submit">Sign Up</LgSgButtonStyle>
-        </form>
-      </FormDivStyle>
-    </LgSgConStyle>
+      <LgSgButtonStyle type="submit">Sign Up</LgSgButtonStyle>
+    </FormStyle>
   );
 };
 
