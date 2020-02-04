@@ -7,6 +7,10 @@ import WelcomePage from "./WelcomePage";
 import Register from "./Register";
 import Login from "./Login";
 
+// Import Styles for the Navigation bar.
+import NavContainerStyle from "./RouterStyles/NavContainerStyle";
+import ListStyle from "./RouterStyles/ListStyle";
+
 // Setup function for router to the app.
 function AppRouter() {
   return (
