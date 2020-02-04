@@ -30,12 +30,12 @@ const LoginForm = props => {
   // layout of the login form
   return (
     // Container Style
-    <div>
+    <LgSgConStyle>
       {/* Form Div Style */}
-      <div>
+      <FormDivStyle>
         <form onSubmit={submitLogin}>
-          <label htmlFor="email">Email</label>
-          <input
+          <LabelStyle htmlFor="email">Email</LabelStyle>
+          <InputStyle
             id="email"
             type="email"
             onChange={handleChanges}
@@ -43,8 +43,8 @@ const LoginForm = props => {
             value={userInfo.email}
           />
 
-          <label htmlFor="password">Password</label>
-          <input
+          <LabelStyle htmlFor="password">Password</LabelStyle>
+          <InputStyle
             id="password"
             type="password"
             onChange={handleChanges}
@@ -54,8 +54,8 @@ const LoginForm = props => {
 
           <button type="submit">Login</button>
         </form>
-      </div>
-    </div>
+      </FormDivStyle>
+    </LgSgConStyle>
   );
 };
 
