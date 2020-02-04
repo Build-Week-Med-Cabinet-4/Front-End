@@ -16,7 +16,7 @@ export const LgSgButtonStyle = styled.button`
     transform: translateY(-1px);
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.12),
       0 2px 3px 2px rgba(0, 0, 0, 0.24);
-    background: black;
+    background: #b6e1de;
     color: white;
   }
 `;

@@ -11,10 +11,10 @@ export const FormStyle = styled.form`
   border-radius: 10px;
 
   padding: 10px 0;
-  background: #00726a;
+  background: white;
 
-  box-shadow: inset 0 0 18px 0 rgba(0, 0, 0, 0.2),
-    0 15px 18px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.2),
+    0 5px 18px 0 rgba(0, 0, 0, 0.4);
   }
 
   &:hover {

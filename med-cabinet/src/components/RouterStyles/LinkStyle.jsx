@@ -10,10 +10,10 @@ const LinkStyle = styled(Link)`
   transition: all 0.2s ease-in;
   background-size: 0px;
   font-weight: bold;
-  color: #b6e1de;
+  color: black;
 
   &:hover {
-    color: white;
+    color: #b6e1de;
   }
 `;
 

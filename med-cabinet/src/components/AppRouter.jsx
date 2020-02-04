@@ -12,6 +12,7 @@ import { NavContainerStyle } from "./RouterStyles/NavContainerStyle";
 import { ListStyle } from "./RouterStyles/ListStyle";
 import { ULStyle } from "./RouterStyles/ULStyle";
 import LinkStyle from "./RouterStyles/LinkStyle";
+import "./AppRouter.css";
 
 // Setup function for router to the app.
 function AppRouter() {
