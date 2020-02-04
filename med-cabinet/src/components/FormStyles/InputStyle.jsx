@@ -8,4 +8,6 @@ export const InputStyle = styled.input`
   box-sizing: border-box;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
 `;
