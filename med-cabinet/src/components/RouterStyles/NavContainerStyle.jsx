@@ -7,6 +7,6 @@ export const NavContainerStyle = styled.nav`
   background: #00726A;
   border-radius: 8px;
   box-shadow: inset 0 0 18px 0 rgba(0, 0, 0, 0.2),
-    0 15px 18px 0 rgba(0, 0, 0, 0.4);
+    0 1px 18px 0 rgba(0, 0, 0, 0.4);
   }
 `;
