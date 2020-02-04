@@ -9,12 +9,11 @@ const LinkStyle = styled(Link)`
   padding: 5px;
   transition: all 0.2s ease-in;
   background-size: 0px;
+  font-weight: bold;
+  color: #b6e1de;
 
   &:hover {
-    color: #a7a5a5;
-    background: white;
-    background-size: 100%;
-    border-radius: 5px;
+    color: white;
   }
 `;
 
