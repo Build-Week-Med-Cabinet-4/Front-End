@@ -1,4 +1,5 @@
 import React from "react";
+import "./RouterStyles/WelcomePage.css";
 
 export default function WelcomePage() {
   return (
