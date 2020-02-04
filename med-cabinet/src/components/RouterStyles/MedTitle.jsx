@@ -16,4 +16,6 @@ export const MedTitle = styled.h1`
   background: #8bc7c2;
 
   color: white;
+
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 `;
