@@ -24,3 +24,49 @@
         margin: 2% 0 0 5%;
     }
 }
+section {
+    .strainScroller {
+        width: 94%;
+        margin: 3% 3%;
+        color: @mainColor;
+        .flex(space-between);
+        h3 {
+            font-size: 250%;
+            font-weight: 600;
+        }
+        a {
+            font-size: 150%;
+        }
+    }
+    .strainSqrs {
+        width: 94%;
+        margin: 0 3%;
+        height: 300px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        border: 1px solid blue;
+        // transform: rotate(-90deg);
+        // transform-origin: right top;
+        div {
+            border: 1px solid red;
+        }
+    }
+    button {
+        margin: 1% 0 0 3%;
+        .button();
+        border: 1px solid salmon;
+        width: 13%;
+        padding: 1% 0;
+    }
+}
+.dispoTiles {
+    padding: 3%;
+    border: 1px solid green;
+    .flex(space-around);
+    div {
+        border: 1px solid green;
+        button {
+            .button();
+        }
+    }
+}

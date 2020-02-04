@@ -249,6 +249,9 @@ header .navSearch {
 header .navSearch input {
   width: 100%;
 }
+header .navSearch i {
+  z-index: 9;
+}
 .moButtons {
   display: flex;
   justify-content: space-between;
@@ -521,6 +524,72 @@ header .navSearch input {
   margin: 2% 0 0 5%;
 }
 .h1Home button:hover {
+  color: black;
+  background: linear-gradient(#025c5c, teal);
+  cursor: pointer;
+}
+section .strainScroller {
+  width: 94%;
+  margin: 3% 3%;
+  color: #025c5c;
+  display: flex;
+  justify-content: space-between;
+}
+section .strainScroller h3 {
+  font-size: 250%;
+  font-weight: 600;
+}
+section .strainScroller a {
+  font-size: 150%;
+}
+section .strainSqrs {
+  width: 94%;
+  margin: 0 3%;
+  height: 300px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border: 1px solid blue;
+}
+section .strainSqrs div {
+  border: 1px solid red;
+}
+section button {
+  margin: 1% 0 0 3%;
+  width: 8rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(teal, #025c5c);
+  color: white;
+  font-weight: 700;
+  border: 1px white solid;
+  border-radius: 3px;
+  border: 1px solid salmon;
+  width: 13%;
+  padding: 1% 0;
+}
+section button:hover {
+  color: black;
+  background: linear-gradient(#025c5c, teal);
+  cursor: pointer;
+}
+.dispoTiles {
+  padding: 3%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-around;
+}
+.dispoTiles div {
+  border: 1px solid green;
+}
+.dispoTiles div button {
+  width: 8rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(teal, #025c5c);
+  color: white;
+  font-weight: 700;
+  border: 1px white solid;
+  border-radius: 3px;
+}
+.dispoTiles div button:hover {
   color: black;
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
