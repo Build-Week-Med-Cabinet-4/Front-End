@@ -2,5 +2,10 @@
 import styled from "styled-components";
 
 export const ULStyle = styled.ul`
-  border: 1px solid purple;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0;
 `;

@@ -4,13 +4,17 @@ import styled from "styled-components";
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  transition: all 0.2s ease-in;
+  background-size: 0px;
 
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
+  &:hover {
+    color: #a7a5a5;
+    background: white;
+    background-size: 100%;
+    border-radius: 5px;
   }
 `;
 

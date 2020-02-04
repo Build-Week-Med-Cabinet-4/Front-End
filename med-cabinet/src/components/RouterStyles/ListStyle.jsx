@@ -2,5 +2,5 @@
 import styled from "styled-components";
 
 export const ListStyle = styled.li`
-  border: 1px solid red;
+  padding: 10px 0;
 `;
