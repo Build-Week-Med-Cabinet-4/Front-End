@@ -11,8 +11,9 @@ import Login from "./Login";
 import { NavContainerStyle } from "./RouterStyles/NavContainerStyle";
 import { ListStyle } from "./RouterStyles/ListStyle";
 import { ULStyle } from "./RouterStyles/ULStyle";
+import { MedTitle } from "./RouterStyles/MedTitle";
 import LinkStyle from "./RouterStyles/LinkStyle";
-import "./AppRouter.css";
+import "./RouterStyles/AppRouter.css";
 
 // Setup function for router to the app.
 function AppRouter() {
@@ -34,6 +35,8 @@ function AppRouter() {
             </ListStyle>
           </ULStyle>
         </NavContainerStyle>
+
+        <MedTitle>Med Cabinet</MedTitle>
 
         <Switch>
           <Route exact path="/" component={WelcomePage} />
