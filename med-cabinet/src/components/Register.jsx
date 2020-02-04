@@ -24,6 +24,7 @@ const RegisterForm = props => {
   // submit form for sign up
   function submitSignup(event) {
     event.preventDefault();
+    props.addNewUser(userInfo);
     setUserInfo({ email: "", username: "", password: "" });
   }
 

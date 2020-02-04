@@ -1,13 +1,13 @@
 //import React with useState
 import React, { useState } from "react";
 
-// importing styles for sign up form
+// importing styles for login form
 import { FormDivStyle } from "./FormStyles/FormDivStyle";
 import { InputStyle } from "./FormStyles/InputStyle";
 import { LabelStyle } from "./FormStyles/LabelStyle";
 import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
 
-// register form function.
+// login form function.
 const LoginForm = props => {
   // store user info in the state variables
   const [userInfo, setUserInfo] = useState({
@@ -20,21 +20,22 @@ const LoginForm = props => {
     setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
   }
 
-  // submit form for sign up
+  // submit form for login
   function submitLogin(event) {
     event.preventDefault();
+    props.addNewUser(userInfo);
     setUserInfo({ email: "", password: "" });
   }
 
-  // layout of the register form
+  // layout of the login form
   return (
     // Container Style
-    <LgSgConStyle>
+    <div>
       {/* Form Div Style */}
-      <FormDivStyle>
+      <div>
         <form onSubmit={submitLogin}>
-          <LabelStyle htmlFor="email">Email</LabelStyle>
-          <InputStyle
+          <label htmlFor="email">Email</label>
+          <input
             id="email"
             type="email"
             onChange={handleChanges}
@@ -42,8 +43,8 @@ const LoginForm = props => {
             value={userInfo.email}
           />
 
-          <LabelStyle htmlFor="password">Password</LabelStyle>
-          <InputStyle
+          <label htmlFor="password">Password</label>
+          <input
             id="password"
             type="password"
             onChange={handleChanges}
@@ -53,8 +54,8 @@ const LoginForm = props => {
 
           <button type="submit">Login</button>
         </form>
-      </FormDivStyle>
-    </LgSgConStyle>
+      </div>
+    </div>
   );
 };
 
