@@ -10,6 +10,7 @@ import Login from "./Login";
 // Import Styles for the Navigation bar.
 import { NavContainerStyle } from "./RouterStyles/NavContainerStyle";
 import { ListStyle } from "./RouterStyles/ListStyle";
+import { ULStyle } from "./RouterStyles/ULStyle";
 
 // Setup function for router to the app.
 function AppRouter() {
@@ -17,18 +18,21 @@ function AppRouter() {
     <Router>
       <div>
         <NavContainerStyle className="main-nav">
-          <ul>
+          <ULStyle>
             <ListStyle>
               <Link to="/">Home</Link>
             </ListStyle>
+
             <ListStyle>
               <Link to="/register">Sign Up</Link>
             </ListStyle>
+
             <ListStyle>
               <Link to="/login">Log in</Link>
             </ListStyle>
-          </ul>
+          </ULStyle>
         </NavContainerStyle>
+
         <Switch>
           <Route exact path="/" component={WelcomePage} />
           <Route path="/register" component={Register} />
