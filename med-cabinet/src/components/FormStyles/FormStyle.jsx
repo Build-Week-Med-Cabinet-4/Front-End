@@ -6,6 +6,7 @@ export const FormStyle = styled.form`
   align-items: center;
 
   width: 50vw;
+  max-width: 500px;
   margin: 50px auto;
 
   border-radius: 10px;

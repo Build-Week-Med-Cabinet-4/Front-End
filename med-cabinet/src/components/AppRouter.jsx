@@ -36,7 +36,7 @@ function AppRouter() {
           </ULStyle>
         </NavContainerStyle>
 
-        <MedTitle>Med Cabinet</MedTitle>
+        <MedTitle>Med Cabinet 💊</MedTitle>
 
         <Switch>
           <Route exact path="/" component={WelcomePage} />
