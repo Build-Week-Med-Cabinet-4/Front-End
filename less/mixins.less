@@ -1,0 +1,29 @@
+.button() {
+    width: 8rem;
+    letter-spacing: 0.2rem;
+    background: linear-gradient(teal, @mainColor);
+    color: white;
+    font-weight: 700;
+    border: 1px white solid;
+    border-radius: 3px;
+
+    &:hover {
+        color: black;
+        background: linear-gradient(@mainColor, teal);
+        cursor: pointer;
+    }
+}
+.plantBlind() {
+    height: 20vh;
+    background-image: url(../img/jhon-david-plAYVXwJ5cA-unsplash.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+    background-position-y: 50%;
+}
+
+.flex(@justify) {
+    display: flex;
+    justify-content: @justify;
+}

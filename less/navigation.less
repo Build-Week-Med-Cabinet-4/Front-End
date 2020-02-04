@@ -1,0 +1,57 @@
+header {
+    .flex(space-between);
+    align-items: center;
+    background-color: @mainColor;
+    padding: 0.5% 0 1%;
+    @media @phone {
+        flex-direction: column;
+    }
+    .logo {
+        margin-left: 40%;
+        a {
+            font-weight: 600;
+            color: white;
+            font-size: 3rem;
+            font-family: @headingFont;
+            text-decoration: none;
+        }
+        @media @tablet {
+            margin-left: 5%;
+        }
+    }
+    .buttons {
+        margin-right: 3%;
+        .flex(space-between);
+        flex-direction: row;
+        width: 15%;
+        @media @phone {
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            margin: 1% 2.5%;
+        }
+
+        button {
+            .button();
+            padding: 3% 0;
+            margin: 0 5%;
+            @media @phone {
+                width: 100%;
+                margin: 1%;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+.moButtons {
+    .flex(space-between);
+    margin-right: 3%;
+    width: 35%;
+    button {
+        .button();
+        padding: 2% 0;
+    }
+    .longerButton {
+        width: 10.5rem;
+    }
+}
