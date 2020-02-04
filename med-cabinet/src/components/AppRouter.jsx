@@ -11,7 +11,7 @@ import Login from "./Login";
 import { NavContainerStyle } from "./RouterStyles/NavContainerStyle";
 import { ListStyle } from "./RouterStyles/ListStyle";
 import { ULStyle } from "./RouterStyles/ULStyle";
-import Linkstyle from "./RouterStyles/LinkStyle";
+import LinkStyle from "./RouterStyles/LinkStyle";
 
 // Setup function for router to the app.
 function AppRouter() {
@@ -21,15 +21,15 @@ function AppRouter() {
         <NavContainerStyle className="main-nav">
           <ULStyle>
             <ListStyle>
-              <Linkstyle to="/">Home</Linkstyle>
+              <LinkStyle to="/">Home</LinkStyle>
             </ListStyle>
 
             <ListStyle>
-              <Linkstyle to="/register">Sign Up</Linkstyle>
+              <LinkStyle to="/register">Sign Up</LinkStyle>
             </ListStyle>
 
             <ListStyle>
-              <Linkstyle to="/login">Log in</Linkstyle>
+              <LinkStyle to="/login">Log in</LinkStyle>
             </ListStyle>
           </ULStyle>
         </NavContainerStyle>
