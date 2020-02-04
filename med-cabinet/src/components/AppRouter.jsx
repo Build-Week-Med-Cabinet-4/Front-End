@@ -21,7 +21,7 @@ function AppRouter() {
               <Link to="/register">Sign Up</Link>
             </li>
             <li>
-              <Link to="/locations">Login</Link>
+              <Link to="/login">Log in</Link>
             </li>
           </ul>
         </nav>
