@@ -10,7 +10,7 @@ import { LgSgConStyle } from "./FormStyles/LgSgConStyle";
 // register form function.
 const RegisterForm = props => {
   // store user info in the state variables
-  const [userInfo, setUserInfo] = usesState({
+  const [userInfo, setUserInfo] = useState({
     email: "",
     username: "",
     password: ""
@@ -33,7 +33,7 @@ const RegisterForm = props => {
     <LgSgConStyle>
       {/* Form Div Style */}
       <FormDivStyle>
-        <form onSubmit={singupForm}>
+        <form onSubmit={submitSignup}>
           <LabelStyle htmlFor="email">Email</LabelStyle>
           <InputStyle
             id="email"
@@ -48,16 +48,16 @@ const RegisterForm = props => {
             id="username"
             type="text"
             onChange={handleChanges}
-            placeholder="medseed@me.com"
+            placeholder="username"
             value={userInfo.username}
           />
 
           <LabelStyle htmlFor="password">Password</LabelStyle>
           <InputStyle
-            id="email"
+            id="password"
             type="password"
             onChange={handleChanges}
-            placeholder="medseed@me.com"
+            placeholder="password"
             value={userInfo.password}
           />
 
@@ -67,3 +67,5 @@ const RegisterForm = props => {
     </LgSgConStyle>
   );
 };
+
+export default RegisterForm;
