@@ -1,6 +1,6 @@
 // Router setup for the page.
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Import welcome page, sign-up page and login page.
 import WelcomePage from "./WelcomePage";
@@ -11,6 +11,7 @@ import Login from "./Login";
 import { NavContainerStyle } from "./RouterStyles/NavContainerStyle";
 import { ListStyle } from "./RouterStyles/ListStyle";
 import { ULStyle } from "./RouterStyles/ULStyle";
+import Linkstyle from "./RouterStyles/LinkStyle";
 
 // Setup function for router to the app.
 function AppRouter() {
@@ -20,15 +21,15 @@ function AppRouter() {
         <NavContainerStyle className="main-nav">
           <ULStyle>
             <ListStyle>
-              <Link to="/">Home</Link>
+              <Linkstyle to="/">Home</Linkstyle>
             </ListStyle>
 
             <ListStyle>
-              <Link to="/register">Sign Up</Link>
+              <Linkstyle to="/register">Sign Up</Linkstyle>
             </ListStyle>
 
             <ListStyle>
-              <Link to="/login">Log in</Link>
+              <Linkstyle to="/login">Log in</Linkstyle>
             </ListStyle>
           </ULStyle>
         </NavContainerStyle>
