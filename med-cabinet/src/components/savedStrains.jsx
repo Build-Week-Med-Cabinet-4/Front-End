@@ -1,16 +1,16 @@
 import React from "react";
 import { connect } from 'react-redux';
 
+
 import { getStrains } from '../actions';
 
-const savedStrains = props => {
+const SavedStrains = props => {
     console.log(props);
     console.log(props.strains);
 
     return (
         <div>
-           
-            <h2>saved strains</h2>
+            <h2>This is saved strains</h2>
             <button onClick={props.getStrains}>Load Strains</button>
             {props.error && <p>{props.error}</p>}
             {props.isFetching && <p>Loading...</p>}
@@ -27,7 +27,8 @@ const mapStateToProps = state => ({
     isFetching: state.strainReducer.isFetching
 });
 
+
 export default connect(
     mapStateToProps,
     { getStrains }
-)(savedStrains);
+)(SavedStrains);

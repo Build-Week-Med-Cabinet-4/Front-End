@@ -13,8 +13,8 @@ import { FormStyle } from "./FormStyles/FormStyle";
 const Register = () => {
 
     const [credentials, setCredentials] = useState({
-        firstName: '',
-        lastName: '',
+        full_name: '',
+        username: '',
         email: '',
         password: ''
     });
@@ -51,25 +51,25 @@ const Register = () => {
   return (
   
   
-    <FormStyle onSubmit={Register}>
-      <LabelStyle htmlFor="firstName">First Name</LabelStyle>
+    <FormStyle onSubmit={register}>
+      <LabelStyle htmlFor="firstName">Full Name</LabelStyle>
       <InputStyle
        type="text"
-       name="firstName"
-       placeholder="First Name"
-       value={credentials.firstName}
+       name="full_name"
+       placeholder="Full Name"
+       value={credentials.full_name}
        onChange={handleChanges}
        required
       />
 
-      <LabelStyle htmlFor="firstName">Last Name</LabelStyle>
+<LabelStyle htmlFor="username">Username</LabelStyle>
       <InputStyle
-       type="text"
-       name="lastName"
-       placeholder="Last Name"
-       value={credentials.lastName}
-       onChange={handleChanges}
-       required
+        type="text"
+        name="username"
+        placeholder="Username"
+        value={credentials.username}
+        onChange={handleChanges}
+        required
       />
 
       <LabelStyle htmlFor="email">Email</LabelStyle>

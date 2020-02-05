@@ -10,7 +10,7 @@ import { LgSgButtonStyle } from "./FormStyles/LgSgButtonStyle";
 
 const Login = () => {
     const [credentials, setCredentials] = useState ({
-        email: '',
+        username: '',
         password: ''
     });
     const [fetching, setFetching ] = useState(false);
@@ -25,33 +25,34 @@ const Login = () => {
     const login = e => {
         e.preventDefault();
         setFetching(true);
-    }
+        axiosWithAuth()
+        .post('/auth/login', credentials)
+        .then(res => {
+            console.log(res);
+            if (res.data.token) {
+                localStorage.setItem('token', res.data.token);
+                history.push('/')
+            } else {
+                setError('Login failed');
+            }
+        })
+        .catch(err => console.log(err));
+    };
 
-    axiosWithAuth()
-    .post('/api/auth/login', credentials)
-    .then(res => {
-        console.log(res);
-        if (res.data.token) {
-            localStorage.setItem('token', res.data.token);
-            history.push('/')
-        } else {
-            setError('Login failed');
-        }
-    })
-    .catch(err => console.log(err));
+  
 
 
 
  // layout of the login form
  return (
     // Container Style
-    <FormStyle onSubmit={Login}>
-      <LabelStyle htmlFor="email">Email</LabelStyle>
+    <FormStyle onSubmit={login}>
+      <LabelStyle htmlFor="username">Username</LabelStyle>
       <InputStyle
         type="text"
-        name="email"
-        placeholder="Email"
-        value={credentials.email}
+        name="username"
+        placeholder="Username"
+        value={credentials.username}
         onChange={handleChanges}
         required
       />
@@ -70,5 +71,5 @@ const Login = () => {
       <LgSgButtonStyle type="submit">Sign in</LgSgButtonStyle>
     </FormStyle>
   );
-}; 
+};
 export default Login;
