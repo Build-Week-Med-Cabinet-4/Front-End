@@ -2,5 +2,8 @@
 import styled from "styled-components";
 
 export const LabelStyle = styled.label`
-  border: 1px solid red;
+  margin-bottom: -12px;
+  text-align: center;
+  width: 200px;
+  color: black;
 `;

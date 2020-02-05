@@ -8,6 +8,10 @@ import Home from './components/Home';
 import StrainSearch from './components/searchStrains';
 import SavedStrains from './components/savedStrains';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import "./App.css";
+
+// Import App Router
+import AppRouter from "./components/AppRouter";
 
 function App() {
   return (
@@ -17,12 +21,7 @@ function App() {
        <PrivateRoute path='/home' component={Home}>
          <Home />
        </PrivateRoute>
-       <Route path='/login'>
-         <Login />
-            </Route>
-       <Route path='/register'>
-         <Register />
-             </Route>    
+
        <Route path="/savedstrains">
           <savedStrains />
              </Route>
@@ -31,8 +30,12 @@ function App() {
              </Route>
         
       </Switch>
+      <div>
+      <AppRouter />
+    </div>
     </Router>
        
+  
   );
 }
 

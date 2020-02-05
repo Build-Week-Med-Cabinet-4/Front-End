@@ -6,7 +6,7 @@ const Card = () => {
     const Box = styled.div`
         display: flex;
         flex-flow: column nowrap;
-        border: 1px solid green;
+        border: 1px solid black;
         width: 30%;
         h2 {
             margin: 0 auto;
