@@ -31,7 +31,7 @@ const Login = () => {
             console.log(res);
             if (res.data.token) {
                 localStorage.setItem('token', res.data.token);
-                history.push('/')
+                history.push('/profile')
             } else {
                 setError('Login failed');
             }

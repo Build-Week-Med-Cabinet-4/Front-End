@@ -29,16 +29,16 @@ export default function Profile() {
             box-shadow: 0 4px 8px 0 rgba( 12, 102, 7, 0.2), 0 6px 20px 0 rgba( 12, 102, 7, 0.19);
             transition: all 0.3s ease;
         }
-        (Link) {
-            text-decoration: none;
-        }
+
+
     `;
 
     return (
         <Wrap>
             <h2>Profile Page</h2>
+            
             <ProfileCard />
-            <Button>Settings</Button>
+          
         </Wrap>
     );
 }

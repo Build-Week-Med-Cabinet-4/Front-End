@@ -19,7 +19,7 @@ export const getStrains = () => {
         dispatch({ type: FETCH_STRAINS_SUCCESS, payload: res.data });
       })
       .catch(err => {
-        console(err);
+        console.log(err);
         dispatch({ type: FETCH_STRAINS_FAILURE });  // set error to payload laters
       });
   };
