@@ -1,5 +1,6 @@
 //import React with useState
 import React, { useState } from "react";
+import axios from "axios";
 
 // importing styles for sign up form
 import { InputStyle } from "./FormStyles/InputStyle";
@@ -24,8 +25,10 @@ const RegisterForm = props => {
   // submit form for sign up
   function submitSignup(event) {
     event.preventDefault();
-    props.addNewUser(userInfo);
-    setUserInfo({ email: "", username: "", password: "" });
+
+    axios.post("https://reqres.in/api/users/", userInfo).then(response => {
+      console.log("success", response);
+    });
   }
 
   // layout of the register form
@@ -36,6 +39,7 @@ const RegisterForm = props => {
       <InputStyle
         id="email"
         type="email"
+        name="email"
         onChange={handleChanges}
         placeholder="medseed@me.com"
         value={userInfo.email}
@@ -45,6 +49,7 @@ const RegisterForm = props => {
       <InputStyle
         id="username"
         type="text"
+        name="username"
         onChange={handleChanges}
         placeholder="username"
         value={userInfo.username}
@@ -54,6 +59,7 @@ const RegisterForm = props => {
       <InputStyle
         id="password"
         type="password"
+        name="password"
         onChange={handleChanges}
         placeholder="password"
         value={userInfo.password}

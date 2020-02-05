@@ -1,5 +1,6 @@
 //import React with useState
 import React, { useState } from "react";
+import axios from "axios";
 
 // importing styles for login form
 import { InputStyle } from "./FormStyles/InputStyle";
@@ -16,15 +17,17 @@ const LoginForm = props => {
   });
 
   // update what the user has typed into state upon the changes
-  function handleChanges(event) {
-    setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
-  }
+  const handleChanges = e => {
+    setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
+  };
 
   // submit form for login
   function submitLogin(event) {
     event.preventDefault();
-    props.addNewUser(userInfo);
-    setUserInfo({ email: "", password: "" });
+
+    axios.post("https://reqres.in/api/users/", userInfo).then(response => {
+      console.log("success", response);
+    });
   }
 
   // layout of the login form
@@ -35,6 +38,7 @@ const LoginForm = props => {
       <InputStyle
         id="email"
         type="email"
+        name="email"
         onChange={handleChanges}
         placeholder="medseed@me.com"
         value={userInfo.email}
@@ -44,6 +48,7 @@ const LoginForm = props => {
       <InputStyle
         id="password"
         type="password"
+        name="password"
         onChange={handleChanges}
         placeholder="password"
         value={userInfo.password}
