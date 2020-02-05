@@ -25,9 +25,14 @@ const LoginForm = props => {
   function submitLogin(event) {
     event.preventDefault();
 
-    axios.post("https://reqres.in/api/users/", userInfo).then(response => {
-      console.log("success", response);
-    });
+    axios
+      .post("https://reqres.in/api/users/", userInfo)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error.response);
+      });
   }
 
   // layout of the login form
