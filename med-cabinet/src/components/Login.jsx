@@ -28,7 +28,7 @@ const Login = () => {
     }
 
     axiosWithAuth()
-    .post('/auth/login', credentials)
+    .post('/api/auth/login', credentials)
     .then(res => {
         console.log(res);
         if (res.data.token) {
@@ -40,7 +40,7 @@ const Login = () => {
     })
     .catch(err => console.log(err));
 
-
+};
 
  // layout of the login form
  return (
@@ -70,6 +70,5 @@ const Login = () => {
       <LgSgButtonStyle type="submit">Sign in</LgSgButtonStyle>
     </FormStyle>
   );
-
- };
+  
 export default Login;
