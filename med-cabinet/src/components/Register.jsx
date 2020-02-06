@@ -1,6 +1,7 @@
 //import React with useState
 import React, { useState } from "react";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 
 // importing styles for sign up form
 import { InputStyle } from "./FormStyles/InputStyle";
@@ -23,9 +24,7 @@ const RegisterForm = props => {
   }
 
   // submit form for sign up
-  function submitSignup(event) {
-    event.preventDefault();
-
+  function submitSignup() {
     axios
       .post("https://reqres.in/api/users/", userInfo)
       .then(response => {
@@ -36,10 +35,14 @@ const RegisterForm = props => {
       });
   }
 
+  // react hook form
+  const { register, handleSubmit, errors } = useForm();
+  console.log(errors);
+
   // layout of the register form
   return (
     // Form Style
-    <FormStyle onSubmit={submitSignup}>
+    <FormStyle onSubmit={handleSubmit(submitSignup)}>
       <LabelStyle htmlFor="email">Email</LabelStyle>
       <InputStyle
         id="email"
@@ -48,6 +51,7 @@ const RegisterForm = props => {
         onChange={handleChanges}
         placeholder="medseed@me.com"
         value={userInfo.email}
+        ref={register({ required: true, pattern: /^\S+@\S+$/i })}
       />
 
       <LabelStyle htmlFor="username">Username</LabelStyle>
@@ -58,6 +62,7 @@ const RegisterForm = props => {
         onChange={handleChanges}
         placeholder="username"
         value={userInfo.username}
+        ref={register({ required: true, maxLength: 100 })}
       />
 
       <LabelStyle htmlFor="password">Password</LabelStyle>
@@ -68,6 +73,7 @@ const RegisterForm = props => {
         onChange={handleChanges}
         placeholder="password"
         value={userInfo.password}
+        ref={register({ required: true, minLength: 6, maxLength: 12 })}
       />
 
       <LgSgButtonStyle type="submit">Sign Up</LgSgButtonStyle>
